@@ -1,13 +1,6 @@
-/*
-Template 2077 Modern Town
-
-http://www.tooplate.com/view/2077-modern-town
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-/* Body 
-------------------------------------- */
+/* Body */
 body {
   background: #ffffff;
   font-family: 'Open Sans', sans-serif;
@@ -21,11 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-.post-masonry img {
-  width: 100%;
-  display: block;
-}
-
 /* Typography */
 h1,
 h2,
@@ -35,14 +23,21 @@ h5 {
   font-weight: bold;
 }
 
-h1 {
-  color: #ffffff;
+h1.gradient-all {
   font-size: 62px;
   line-height: 72px;
+  background: linear-gradient(135deg, #287058 20%, #00ffff 70%);
+  -webkit-background-clip: text; /* Vendor-prefixed property */
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent;
+  display: block;
+  padding: 0.3em 0.6em;
+  text-align: center;
 }
 
+
 h2 {
-  color: #030303; /*тект снизу*/
+  color: #030303;
   font-size: 26px;
   line-height: 42px;
   letter-spacing: 1px;
@@ -50,7 +45,7 @@ h2 {
 }
 
 h3 {
-  color: #89eff7; /* Original color */
+  color: #89eff7;
   font-size: 16px;
   letter-spacing: 2px;
 }
@@ -66,8 +61,7 @@ p {
   line-height: 32px;
 }
 
-/* All Section styles
-------------------------------------- */
+/* All Section styles */
 #testimonial,
 #blog,
 #counter,
@@ -142,8 +136,8 @@ p {
 /* about section styles */
 #about .container {
   width: 100%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 #about .col-md-6 {
@@ -160,7 +154,7 @@ p {
 }
 
 #about .about-des h4 {
-  font-size: 20px;
+  font-size: 28px;
   text-align: justify;
 }
 
@@ -193,7 +187,7 @@ p {
 
 /* contact section styles */
 #contact {
-  background: url('../images/contact-bg.jpg') 50% 0 repeat-y fixed;
+  background: url('../images/contact.jpg') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
@@ -245,6 +239,7 @@ p {
 
 #contact .contact-detail h2 {
   padding-bottom: 28px;
+  text-align: center;
 }
 
 #contact .contact-detail div {
@@ -261,6 +256,7 @@ footer p {
   padding-right: 40px;
   padding-bottom: 20px;
   font-size: 14px;
+  text-align: justify;
 }
 
 footer a {
@@ -307,179 +303,95 @@ footer a:hover {
   background: #ffa400;
 }
 
-/* Button Styles */
-#buttons {
-  text-align: center;
-  margin-top: 60px;
-}
-
-a {
-  position: relative;
-  display: inline-block;
-  padding: 25px 30px;
-  margin: 40px 0;
-  color: #03e9f4;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.5s;
-  letter-spacing: 4px;
-  overflow: hidden;
-  margin-right: 50px; /* Adjust margin as per your layout */
-}
-
-a:hover {
-  background: #03e9f4;
-  color: #050801;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-}
-
-a span {
-  position: absolute;
-  display: block;
-}
-
-a span:nth-child(1) {
-  top: 0;
-  left: 0;
+/* Blog Section Styles */
+#blog .container {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animate1 1s linear infinite;
 }
 
-@keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
+#blog .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
+#blog .post-masonry {
+  width: calc(50% - 15px); /* 15px is half of the column gap */
+  margin-bottom: 30px;
 }
 
-@keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
-}
-
-a span:nth-child(3) {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.50s;
-}
-
-@keyframes animate3 {
-  0% {
-    right: -100%;
-  }
-  50%,
-  100% {
-    right: 100%;
-  }
-}
-
-a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
-}
-
-@keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,
-  100% {
-    bottom: 100%;
-  }
-}
-
-/* Media Queries */
-@media (max-width: 1280px) {
-  #about .about-des {
-    padding: 40px; /* Убираем внутренние отступы */
-    width: 100%; /* Занимаем всю доступную ширину */
-  }
-
-  #about .about-des h3 {
-    font-size: 20px;
-  }
-
-  #about .about-des h4 {
-    font-size: 16px;
-  }
-
-  #about .about-des p {
-    font-size: 13px;
-    line-height: 20px;
-    text-align: justify; /* Выравнивание текста по ширине блока */
-    margin: 0; /* Убираем внешние отступы у параграфов */
+@media (max-width: 992px) {
+  #blog .post-masonry {
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 53px;
-  }
-  #counter .counter-item {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  #blog .post-masonry {
+    width: 100%;
+    margin-right: 0;
   }
 }
 
-@media (max-width: 650px) {
-  h1 {
-    font-size: 40px;
-  }
+#blog .blog-wrapper {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%; /* Установка одинаковой высоты для карточек блога */
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 450px) {
-  h1 {
-    font-size: 28px;
-    line-height: 38px;
-  }
-  #home h5 {
-    font-size: 11px;
-  }
-  #home .btn {
-    display: inline-block;
-    padding: 14px 32px;
-  }
+#blog .blog-wrapper img {
+  width: 100%;
+  height: 450px; /* Высота изображения, адаптированная под меньшие экраны */
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-@media (max-width: 375px) {
-  h1 {
-    font-size: 24px;
-    line-height: 34px;
-  }
-  #home h5 {
-    font-size: 9px;
+#blog .blog-wrapper .blog-inner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Гарантия заполнения содержимого по высоте */
+}
+
+#blog .blog-wrapper h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px; /* Регулировка промежутка */
+}
+
+#blog .blog-wrapper p {
+  color: #707070;
+  margin-top: 0;
+  flex-grow: 1; /* Адаптивность текста */
+}
+
+#blog .blog-wrapper .btn-buy {
+  background-color: #9cebd5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  margin-top: auto; 
+  align-self: flex-end; 
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+}
+
+#blog .blog-wrapper .btn-buy:hover {
+  background-color: #79b0a1;
+}
+
+@media (max-width: 768px) {
+  #blog .blog-wrapper img {
+    height: 250px; /* Изменение высоты изображения на меньших экранах */
   }
 }
