@@ -1,136 +1,113 @@
+$(document).ready(function () {
 
-
- /* template navigation
-  -----------------------------------------------*/
- $('.main-navigation').onePageNav({
+    /* template navigation
+    -----------------------------------------------*/
+    $('.main-navigation').onePageNav({
         scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-        scrollOffset: 75, //Height of Navigation Bar
+        scrollOffset: 75, // Height of Navigation Bar
         filter: ':not(.external)',
         changeHash: true
-    }); 
+    });
 
     /* Navigation visible on Scroll */
-    mainNav();
+    mainNav(); // Initial call to set navigation state
     $(window).scroll(function () {
-        mainNav();
+        mainNav(); // Call mainNav() on scroll
     });
 
     function mainNav() {
-        var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40) $('.sticky-navigation').stop().animate({
-            "opacity": '1',
-            "top": '0'
-        });
-        else $('.sticky-navigation').stop().animate({
-            "opacity": '0',
-            "top": '-75'
-        });
+        var top = $(window).scrollTop(); // Use jQuery to get scroll position
+        if (top > 40) {
+            $('.sticky-navigation').stop().animate({
+                "opacity": '1',
+                "top": '0'
+            });
+        } else {
+            $('.sticky-navigation').stop().animate({
+                "opacity": '0',
+                "top": '-75px' // Corrected top value with 'px' suffix
+            });
+        }
     }
 
-$(document).ready(function() {
-
-  /* Hide mobile menu after clicking on a link
+    /* Hide mobile menu after clicking on a link
     -----------------------------------------------*/
-    $('.navbar-collapse a').click(function(){
+    $('.navbar-collapse a').click(function () {
         $(".navbar-collapse").collapse('hide');
     });
 
-
-  /* jQuery to collapse the navbar on scroll
+    /* smoothscroll
     -----------------------------------------------*/
-  $(window).scroll(function() {
-      if ($(".navbar").offset().top > 50) {
-          $(".navbar-fixed-top").addClass("top-nav-collapse");
-      } else {
-          $(".navbar-fixed-top").removeClass("top-nav-collapse");
-      }
-  });
-
-
-   /*  smoothscroll
-    -----------------------------------------------*/
-   $(function() {
-        $('.navbar-default a').bind('click', function(event) {
-            var $anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top - 49
-            }, 1000);
-            event.preventDefault();
-        });
+    $('.navbar-default a').click(function (event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 49
+        }, 1000);
+        event.preventDefault();
     });
 
-
-  /* blog masonry
-  -----------------------------------------------*/
-  $(window).load(function () {
-    blogisotope = function () {
-        var e, t = $(".blog-masonry").width(),
-            n = Math.floor(t);
-        if ($(".blog-masonry").hasClass("masonry-true") === true) {
-            n = Math.floor(t * .3033);
-            e = Math.floor(t * .04);
-            if ($(window).width() < 1023) {
-                if ($(window).width() < 768) {
-                    n = Math.floor(t * 1)
+    /* blog masonry
+    -----------------------------------------------*/
+    $(window).on('load', function () {
+        function blogisotope() {
+            var t = $(".blog-masonry").width(),
+                n = Math.floor(t),
+                e = 0;
+            if ($(".blog-masonry").hasClass("masonry-true")) {
+                n = Math.floor(t * .3033);
+                e = Math.floor(t * .04);
+                if ($(window).width() < 1023) {
+                    if ($(window).width() < 768) {
+                        n = Math.floor(t * 1);
+                    } else {
+                        n = Math.floor(t * .48);
+                    }
                 } else {
-                    n = Math.floor(t * .48)
+                    n = Math.floor(t * .3033);
                 }
-            } else {
-                n = Math.floor(t * .3033)
             }
+            return e;
         }
-        return e
-    };
-    var r = $(".blog-masonry");
-    bloggingisotope = function () {
-        r.isotope({
-            itemSelector: ".post-masonry",
-            animationEngine: "jquery",
-            masonry: {
-                gutterWidth: blogisotope()
-            }
-        })
-    };
-    bloggingisotope();
-    $(window).smartresize(bloggingisotope)
-  })
 
+        var r = $(".blog-masonry");
+        function bloggingisotope() {
+            r.isotope({
+                itemSelector: ".post-masonry",
+                animationEngine: "jquery",
+                masonry: {
+                    gutterWidth: blogisotope()
+                }
+            });
+        }
 
-  /* Owl Carousel
-    -----------------------------------------------*/
-  $(document).ready(function() {
-    $("#owl-testimonial").owlCarousel({
-      autoPlay: 8000,
-      singleItem: true,
+        bloggingisotope();
+        $(window).smartresize(bloggingisotope);
     });
-  });
 
-
-  /* Parallax section
+    /* Owl Carousel
     -----------------------------------------------*/
-  function initParallax() {
-    $('#home').parallax("100%", 0.1);
-    $('#testimonial').parallax("100%", 0.3);
-    $('#about').parallax("100%", 0.1);
-    $('#counter').parallax("100%", 0.2);
-    $('#blog').parallax("100%", 0.1);
-    $('#contact').parallax("100%", 0.3);
+    $("#owl-testimonial").owlCarousel({
+        autoplay: true, // Enable autoplay
+        autoplayTimeout: 8000, // Autoplay interval in milliseconds
+        items: 1, // Display only one item at a time
+        loop: true // Enable loop
+    });
 
-  }
-  initParallax();
-
-
-   /* Divider Counter
+    /* Parallax section
     -----------------------------------------------*/
-  jQuery('.counter-item').appear(function() {
-    jQuery('.counter-number').countTo();
-    jQuery(this).addClass('funcionando');
-    console.log('funcionando');
-  });
+    function initParallax() {
+        $('#home').parallax("100%", 0.1);
+        $('#testimonial').parallax("100%", 0.3);
+        $('#about').parallax("100%", 0.1);
+        $('#counter').parallax("100%", 0.2);
+        $('#blog').parallax("100%", 0.1);
+        $('#contact').parallax("100%", 0.3);
+    }
+    initParallax();
 
-  /* wow
-  -------------------------------*/
-  new WOW({ mobile: false }).init();
+    /* wow
+    -------------------------------*/
+    new WOW({ mobile: false }).init();
 
-  });
 
+});

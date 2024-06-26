@@ -3,11 +3,11 @@
 /* Body */
 body {
   background: #ffffff;
-  font-family: 'Open Sans', sans-serif;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   position: relative;
-  margin: 0; /* Добавлено для удаления внешних отступов */
-  padding: 0; /* Добавлено для удаления внешних отступов */
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -28,9 +28,9 @@ h5 {
 h1.gradient-all {
   font-size: 62px;
   line-height: 72px;
-  background: linear-gradient(135deg, #287058 20%, #00ffff 70%);
-  -webkit-background-clip: text; /* Vendor-prefixed property */
-  background-clip: text; /* Standard property */
+  background: linear-gradient(135deg, #cdfaeb 20%, #00ffff 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
   padding: 0.3em 0.6em;
@@ -43,13 +43,22 @@ h2 {
   line-height: 42px;
   letter-spacing: 1px;
   padding-bottom: 12px;
-  text-align: center;
 }
 
 h3 {
   color: #89eff7;
-  font-size: 16px;
+  font-size: 38px;
   letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+h4 {
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  margin-top: 30px; /* Adjust the top margin as needed */
 }
 
 h5 {
@@ -58,7 +67,7 @@ h5 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 26px;
   letter-spacing: 0.9px;
   line-height: 32px;
 }
@@ -87,13 +96,7 @@ p {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   text-align: center;
@@ -126,8 +129,6 @@ p {
 /* testimonial section styles */
 #testimonial .item {
   text-align: center;
-  display: block;
-  width: 100%;
   padding-bottom: 62px;
 }
 
@@ -148,22 +149,17 @@ p {
 
 #about .about-des {
   padding: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align content vertically in the center */
 }
 
-#about .about-des h3 {
-  font-size: 26px;
-  text-align: justify;
-}
-
-#about .about-des h4 {
-  font-size: 28px;
-  text-align: justify;
-}
-
+#about .about-des h3,
+#about .about-des h4,
 #about .about-des p {
   text-align: justify;
-  font-size: 16px;
-  line-height: 32px;
+  margin-bottom: 5px; /* Add some bottom margin for separation */
+  margin-top: 40px; /* Adjust the top margin as needed */
 }
 
 /* Counter section styles */
@@ -213,7 +209,7 @@ p {
   border-radius: 4px;
   font-weight: bold;
   letter-spacing: 1px;
-  height: 50px;
+  height: 60px;
   margin-top: 10px;
 }
 
@@ -241,7 +237,6 @@ p {
 
 #contact .contact-detail h2 {
   padding-bottom: 28px;
-  text-align: center;
 }
 
 #contact .contact-detail div {
@@ -257,16 +252,18 @@ footer {
 footer p {
   padding-right: 40px;
   padding-bottom: 20px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify;
 }
 
 footer a {
   color: #606060;
+  text-align:justify;
+  font-size: 16px;
 }
 
 footer a:hover {
-  color: #ffa400;
+  color: #36d8e4;
   text-decoration: none;
 }
 
@@ -277,54 +274,21 @@ footer a:hover {
   padding-bottom: 4px;
 }
 
-.social-icon {
-  padding: 0;
-  margin: 0;
-}
-
-.social-icon li {
-  list-style: none;
-  display: inline-block;
-}
-
-.social-icon li a {
-  background: #3c3c3c;
-  border-radius: 100%;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 32px;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-  margin-right: 2px;
-}
-
-.social-icon li a:hover {
-  background: #ffa400;
-}
-
 /* Blog Section Styles */
 #blog .container {
   width: 100%;
+  gap: 5px; /* Отступ между элементами в контейнере */
 }
 
-#blog .post-masonry {
-  width: calc(50% - 15px); /* 15px is half of the column gap */
-  margin-bottom: 30px;
+#blog .post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два блока в одном ряду */
+  grid-gap: 30px; /* Увеличенный отступ между блоками */
 }
 
 @media (max-width: 992px) {
-  #blog .post-masonry {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  #blog .post-masonry {
-    width: 100%;
-    margin-right: 0;
+  #blog .post-grid {
+    grid-template-columns: repeat(1, 1fr); /* Один блок в одном ряду на меньших экранах */
   }
 }
 
@@ -335,55 +299,121 @@ footer a:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px; /* Увеличенный отступ между блоками */
 }
 
 #blog .blog-inner {
-  padding: 20px;
+  padding: 20px; /* Увеличенные внутренние отступы */
   display: flex;
   flex-direction: column;
 }
 
+#blog h2 {
+  font-size: 32px; /* Увеличенный размер заголовка */
+  text-align: center;
+}
+
 #blog .blog-wrapper h3 {
-  font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  font-size: 32px; /* Увеличенный размер заголовка */
+  margin-top: 10px;
+  margin-bottom: 10px; /* Увеличенный отступ снизу заголовка */
 }
 
 #blog .blog-wrapper p {
-  color: #707070;
+  color: #000000;
   margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 #blog .blog-wrapper .btn-buy {
-  background-color: #8dffdf;
-  color: #ffffff;
-  padding: 10px 20px;
+  background-color: #90e0e6; /* Цвет фона кнопки */
+  color: #000000; /* Цвет текста кнопки */
+  padding: 12px 24px; /* Отступы внутри кнопки */
   border-radius: 5px;
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 300;
   transition: background-color 0.3s ease;
   text-transform: uppercase;
-  margin-top: auto;
   align-self: flex-end;
+  margin-top: auto;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
 #blog .blog-wrapper .btn-buy:hover {
-  background-color: #79b0a1;
+  background-color: #00fff2; /* Измененный цвет фона при наведении */
 }
 
 @media (max-width: 768px) {
+  /* Стили для мобильных устройств */
   #blog .owl-carousel .item img {
-    height: auto; /* Reset height to auto for smaller screens */
+    width: 100%; /* Ширина изображений в карусели на 100% ширины контейнера */
+    height: auto; /* Автоматическая высота изображений для сохранения пропорций */
   }
-}
 
-@media (max-width: 768px) {
   #blog .owl-carousel .owl-item {
-    width: 100% !important;
+    width: 100% !important; /* Ширина 100% для элементов карусели */
     max-width: 100% !important;
   }
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  left: 10px; /* Располагаем кнопку "назад" слева */
+}
+
+.owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  right: 10px; /* Располагаем кнопку "вперед" справа */
+}
+
+.owl-carousel .owl-dot {
+  display: none; /* Скрываем точки навигации, если не нужны */
+}
+
+
+/* Анимация для навбара */
+.navbar-default .navbar-nav > li.active > a {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2); /* цвет фона активного элемента */
+  padding: 10px 15px; /* отступы внутри активного элемента */
+  transition: background-color 0.3s ease; /* плавное изменение цвета фона */
+}
+
+.navbar-hidden {
+  display: none !important;
+}
+
+.navbar-default {
+  transition: all 0.3s ease-in-out; /* добавляем плавный переход */
+  font-family:'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.navbar-default .navbar-nav > li > a {
+  transition: color 0.3s ease-in-out; /* добавляем плавный переход для цвета текста ссылок */
+}
+
+.navbar-default.navbar-shrink {
+  padding-top: 10px; /* уменьшаем отступ сверху при сжатом навбаре */
+  padding-bottom: 10px; /* уменьшаем отступ снизу при сжатом навбаре */
+  background-color: rgba(0, 0, 0, 0.233); /* меняем фон навбара при сжатом состоянии */
+}
+
+.navbar-default.navbar-shrink .navbar-nav > li > a {
+  color: #fff; /* меняем цвет текста ссылок при сжатом навбаре */
+}
+
+.navbar-default.navbar-shrink .navbar-brand {
+  color: #ffffff; /* меняем цвет текста логотипа при сжатом навбаре */
 }

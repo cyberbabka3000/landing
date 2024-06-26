@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>OMLOOK</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="keywords" content="OMLOOK, автомобили, Китай, кэшбэк">
     <meta name="description"
@@ -13,24 +13,48 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fowviel&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
+    <!-- Navigation section -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">OMLOOK</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="smoothScroll">Главная</a></li>
+                    <li><a href="#about" class="smoothScroll">О нас</a></li>
+                    <li><a href="#blog" class="smoothScroll">Наши машины</a></li>
+                    <li><a href="#contact" class="smoothScroll">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- Home section -->
     <section id="home" class="parallax-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 text-center">
-                    <h1 class="gradient-all">OMLOOK</h1>
+                    <h1 class="gradient-all wow fadeInDown" data-wow-delay="0.2s">OMLOOK</h1>
                     <a href="https://omlook.com/test/navigate/auto" class="btn btn-danger wow fadeInUp"
                         data-wow-delay="0.6s">Купить</a>
-                    <a href="#about" class="btn btn-default smoothScroll wow fadeInUp"
-                        data-wow-delay="0.8s">О нас</a>
+                    <a href="#about" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.8s">О нас</a>
                 </div>
             </div>
         </div>
@@ -41,30 +65,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <img src="images/about-img-1.jpg" class="img-responsive" alt="about img 1">
+                    <img src="images/about-img-1.jpg" class="img-responsive wow fadeInLeft" alt="about img 1"
+                        data-wow-delay="0.3s">
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="about-des">
-                        <h4>Лучшие машины, гарантия качества</h4>
-                        <h3>Купи, езди, получай кэшбэк баллами</h3>
-                        <p>Мы гарантируем качество и надежность каждого автомобиля, предлагая выгодные условия покупки и
-                            дополнительные бонусы. Наши клиенты могут не только купить авто, но и получить кэшбэк баллами,
-                            которые можно использовать в дальнейших покупках и услугах.</p>
+                        <h4 class="wow fadeInRight" data-wow-delay="0.3s">Лучшие машины, гарантия качества</h4>
+                        <h3 class="wow fadeInRight" data-wow-delay="0.5s">Купи, езди, получай кэшбэк баллами</h3>
+                        <p class="wow fadeInRight" data-wow-delay="0.7s">Лучшие автомобили, гарантия качества. Покупайте
+                            у нас и наслаждайтесь не только отличным автомобилем, но и дополнительными преимуществами в
+                            виде кэшбэк баллов. Эти бонусы можно использовать при последующих покупках или на наших
+                            услугах. Не просто покупайте автомобиль, получайте за это вознаграждение.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="about-des">
-                        <h4>Прямо из Китая</h4>
-                        <h3>Лучшие на рынке</h3>
-                        <p>Универсальный автомобильный хаб, предлагающий прямые поставки автомобилей из Китая от таких
-                            известных брендов, как Форд, Тойота, Хендай и многих других. У нас вы можете приобрести
-                            автомобили напрямую от производителя по доступным ценам.</p>
+                        <h4 class="wow fadeInLeft" data-wow-delay="0.3s">Прямо из Китая</h4>
+                        <h3 class="wow fadeInLeft" data-wow-delay="0.5s">Лучшие на рынке</h3>
+                        <p class="wow fadeInLeft" data-wow-delay="0.7s">Мы предлагаем вам лучшие автомобили на рынке от
+                            таких известных брендов, как Ford, Toyota, Hyundai и многих других. Наш универсальный
+                            автомобильный хаб производит эксклюзивные прямые поставки автомобилей прямо от производителя,
+                            что делает покупку у нас особенно выгодной.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <img src="images/walking_boy.jpg" class="img-responsive" alt="about img 2">
+                    <img src="images/walking_boy.jpg" class="img-responsive wow fadeInRight" alt="about img 2"
+                        data-wow-delay="0.3s">
                 </div>
             </div>
         </div>
@@ -74,78 +102,95 @@
     <section id="blog" class="parallax-section">
         <div class="container">
             <div class="row">
-                <h2>Наши машины</h2>
+                <h2 class="wow fadeInDown">Наши машины</h2>
             </div>
             <div class="row blog-masonry masonry-true">
-                <div class="post-masonry col-md-6 col-sm-12">
+                <div class="post-masonry col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="blog-wrapper">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item"><img src="images/image.png" class="img-responsive" alt="blog img"></div>
+                        <div class="owl-carousel owl-theme-default">
+                            <div class="item"><img src="images/cars/mul1.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/mul2.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/mul3.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/mul4.jpg" class="img-responsive" alt="blog img">
+                            </div>
                         </div>
                         <div class="blog-inner">
-                            <h3>FORD TRANSIT T8</h3>
-                            <p>Цельнометаллический фургон<br> 
-                                Год выпуска: 2023 <br>
-                                Стоимость: от 5 060 000 Руб
-                            </p>
-                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">Купить</a>
+                            <h3>FORD TRANSIT Т6</h3>
+                            <p> ◦ Микроавтобус<br> ◦ Год выпуска: 2024 <br> ◦ Стоимость: от 5 300 000 Руб </p>
+                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">К у п и т ь</a>
                         </div>
                     </div>
                 </div>
-                <div class="post-masonry col-md-6 col-sm-12">
+                <div class="post-masonry col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="blog-wrapper">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item"><img src="images/front.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/back.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/side.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/inner.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/saloon.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/passside.jpg" class="img-responsive" alt="blog img"></div>
-                        </div>
-                        <div class="blog-inner">
-                            <h3>FORD TRANSIT</h3>
-                            <p>Микроавтобус бизнес-класса выполнен по индивидуальному заказу.<br> Год выпуска: 2024
-                                <br> Стоимость: от 7 000 000 Руб
-                            </p>
-                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">Купить</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-masonry col-md-6 col-sm-12">
-                    <div class="blog-wrapper">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item"><img src="images/frontt6.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/fronttt6.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/sidet6.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/innert6.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/backt6.jpg" class="img-responsive" alt="blog img"></div>
+                        <div class="owl-carousel owl-theme-default">
+                            <div class="item"><img src="images/cars/frontt6.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/fronttt6.jpg" class="img-responsive"
+                                    alt="blog img"></div>
+                            <div class="item"><img src="images/cars/sidet6.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/innert6.jpg" class="img-responsive" alt="
+
+blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/backt6.jpg" class="img-responsive" alt="blog img">
+                            </div>
                         </div>
                         <div class="blog-inner">
                             <h3>FORD TRANSIT T6</h3>
-                            <p>Цельнометаллический фургон<br> 
-                                Год выпуска: 2024 
-                                <br> Стоимость: от 4 600 000 Руб
+                            <p> ◦ Цельнометаллический фургон<br> ◦ Год выпуска: 2024 <br> ◦ Стоимость: от 4 600 000 Руб
                             </p>
-                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">Купить</a>
+                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">К у п и т ь</a>
                         </div>
                     </div>
                 </div>
-                <div class="post-masonry col-md-6 col-sm-12">
+                <div class="post-masonry col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.9s">
                     <div class="blog-wrapper">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item"><img src="images/t8_frontr.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/t8_frontl.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/t8_weel.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/t8_inner.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/t8_fara.jpg" class="img-responsive" alt="blog img"></div>
-                            <div class="item"><img src="images/t8_back.jpg" class="img-responsive" alt="blog img"></div>
+                        <div class="owl-carousel owl-theme-default">
+                            <div class="item"><img src="images/cars/t8_frontr.jpg" class="img-responsive"
+                                    alt="blog img"></div>
+                            <div class="item"><img src="images/cars/t8_frontl.jpg" class="img-responsive"
+                                    alt="blog img"></div>
+                            <div class="item"><img src="images/cars/t8_weel.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/t8_inner.jpg" class="img-responsive"
+                                    alt="blog img"></div>
+                            <div class="item"><img src="images/cars/t8_fara.jpg" class="img-responsive" alt="blog img">
+                            </div>
                         </div>
                         <div class="blog-inner">
-                            <h3>Toyota Land</h3>
-                            <p>Год выпуска: 2023<br> 
-                                Стоимость: от 3 950 000 Руб
+                            <h3>FORD TRANSIT T8</h3>
+                            <p> ◦ Цельнометаллический фургон<br> ◦ Год выпуска: 2024 <br> ◦ Стоимость: от 5 500 000 Руб
                             </p>
-                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">Купить</a>
+                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">К у п и т ь</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-masonry col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="blog-wrapper">
+                        <div class="owl-carousel owl-theme-default">
+                            <div class="item"><img src="images/cars/front.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/back.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/side.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/inner.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/saloon.jpg" class="img-responsive" alt="blog img">
+                            </div>
+                            <div class="item"><img src="images/cars/passside.jpg" class="img-responsive"
+                                    alt="blog img"></div>
+                        </div>
+                        <div class="blog-inner">
+                            <h3>FORD TRANSIT</h3>
+                            <p> ◦ Микроавтобус бизнес-класса выполнен по индивидуальному заказу.<br> ◦ Год выпуска:
+                                2024 <br> ◦ Стоимость: от 7 000 000 Руб </p>
+                            <a href="https://omlook.com/test/navigate/auto" class="btn-buy">К у п и т ь</a>
                         </div>
                     </div>
                 </div>
@@ -158,23 +203,25 @@
         <div class="container">
             <div class="row">
                 <!-- Contact form section -->
-                <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-delay="0.6s">
-                    <form action="#" method="post">
+                <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.3s">
+                    <form id="contact-form" method="post" action="https://mail.google.com" role="form">
                         <div class="col-md-12 col-sm-12">
                             <input type="text" class="form-control" placeholder="Имя" name="name" id="name">
                             <input type="email" class="form-control" placeholder="Email" name="email" id="email">
                             <input type="text" class="form-control" placeholder="Тема" name="subject">
                             <textarea name="message" rows="8" class="form-control" id="message"
-                                placeholder="Сообщение" message="message"></textarea>
+                                placeholder="Сообщение"></textarea>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <input name="submit" type="submit" class="form-control" id="submit"
-                                value="Отправить сообщение">
+                            <input name="submit" type="submit" class="form-control" id="submit" value="Отправить сообщение">
                         </div>
                     </form>
+                    
+                    <!-- Для отображения сообщений об отправке -->
+                    <div id="form-messages"></div>
                 </div>
                 <!-- Contact detail section -->
-                <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
                     <div class="contact-detail">
                         <h2>СВЯЗАТЬСЯ С НАМИ</h2>
                         <div>
@@ -183,8 +230,8 @@
                         </div>
                         <div>
                             <h4>Отправьте нам письмо</h4>
-                            <p>Email: hello@company.com</p>
-                            <p>Tel: 010-020-0770 </p>
+                            <p>Email: s.orlov@omlook.com</p>
+                            <p>Tel: +7(999)999-99-99 </p>
                         </div>
                     </div>
                 </div>
@@ -202,11 +249,11 @@
                         черта Omlook - это его приемлемые цены и высокий кэшбэк. Тем самым, это делает его привлекательной
                         точкой для пользователей различных потребностей.</p>
                 </div>
-                <div class="link-list col-md-2 col-sm-2 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="link-list col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.6s">
                     <h2>Компания</h2>
-                    <a href="#about">О нас</a>
+                    <a href="#about"> О нас</a>
                 </div>
-                <div class="link-list col-md-2 col-sm-2 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="link-list col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.6s">
                     <h2>Поддержка</h2>
                     <a href="#contact">Напишите нам</a>
                 </div>
@@ -214,45 +261,111 @@
         </div>
         <div class="col-md-12 col-sm-12">
             <div class="copyright-text wow bounceIn">
-
+                <p>&copy; 2024 OMLOOK. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.nav.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.parallax.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.min.js"></script>
+    <!-- WOW JS -->
     <script src="js/wow.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="js/isotope.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="js/smoothscroll.js"></script>
+    <!-- Navigation -->
+    <script src="js/jquery.nav.js"></script>
+    <!-- Parallax -->
+    <script src="js/jquery.parallax.js"></script>
+    <!-- Owl Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Custom JavaScript -->
     <script src="js/custom.js"></script>
 
-
-    <!-- Карусель -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
+            // Initialize WOW.js for scroll animations
+            new WOW().init();
+
             $(".owl-carousel").owlCarousel({
                 loop: true,
                 margin: 20,
-                responsive:{
-                    0:{
+                nav: true,
+                autoplay: true, // Включение автопрокрутки
+                autoplayTimeout: 3500, // Интервал автопрокрутки в миллисекундах (например, 5 секунд)
+                autoplayHoverPause: true, // Приостанавливать прокрутку при наведении курсора
+                responsive: {
+                    0: {
                         items: 1
                     },
-                    600:{
+                    600: {
                         items: 1
                     },
-                    1000:{
+                    1000: {
                         items: 1
                     }
                 }
             });
         });
+
+        $(document).ready(function() {
+            // Add scrollspy to <body>
+            $('body').scrollspy({target: ".navbar", offset: 50});
+    
+            // Add smooth scrolling on all links inside the navbar
+            $("#myNavbar a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+    
+                    var hash = this.hash;
+    
+                    // Using jQuery's animate() method to add smooth page scroll
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+    
+            // Change navbar background and text color on scroll
+            $(window).scroll(function() {
+                if ($(".navbar").offset().top > 50) {
+                    $(".navbar-default").addClass("navbar-shrink");
+                } else {
+                    $(".navbar-default").removeClass("navbar-shrink");
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            var lastScrollTop = 0;
+            var delta = 5; // how many pixels user needs to scroll to make navbar disappear
+        
+            $(window).scroll(function(event){
+                var st = $(this).scrollTop();
+        
+                // Make sure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+        
+                // If current position > last position, hide navbar
+                if (st > lastScrollTop){
+                    $('.navbar-fixed-top').fadeOut();
+                } else {
+                    // If current position < last position, show navbar
+                    $('.navbar-fixed-top').fadeIn();
+                }
+                lastScrollTop = st;
+            });
+        });
+        
     </script>
 
 </body>
 
 </html>
+

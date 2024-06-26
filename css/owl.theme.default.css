@@ -1,0 +1,91 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+ .owl-theme .owl-nav {
+    margin-top: 5px; /* Уменьшаем отступ сверху до навигационных элементов */
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #FFF;
+    text-decoration: none;
+}
+.owl-theme .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+}
+.owl-theme .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px; /* Adjust the width of the dot */
+    height: 20px; /* Adjust the height of the dot */
+    margin: 5px; /* Adjust the margin around the dot */
+    background: #ffffff; /* Background color of the dot */
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 50%; /* Make the dot circular */
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffffff;
+}
+  
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  font-size: 80px; /* Increase the font size to make the arrows larger */
+  width: 60px; /* Increase the width of the arrows */
+  height: 60px; /* Increase the height of the arrows */
+  line-height: 60px; /* Ensure the line height matches the height for centering */
+  background-color: #ffffff; /* Background color of the arrows */
+  border: none; /* Remove any borders */
+  border-radius: 50%; /* Make the arrows circular */
+  text-align: center; /* Center align the content */
+  color: #ffffff; /* Text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.owl-carousel .owl-nav .owl-prev:hover,
+.owl-carousel .owl-nav .owl-next:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+  color: #000000; /* Text color on hover */
+}
+
+/* Positioning for the "previous" arrow */
+.owl-carousel .owl-nav .owl-prev {
+  left: 10px; /* Position "previous" arrow on the left side */
+}
+
+/* Positioning for the "next" arrow */
+.owl-carousel .owl-nav .owl-next {
+  right: 10px; /* Position "next" arrow on the right side */
+}
